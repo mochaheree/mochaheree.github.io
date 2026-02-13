@@ -1,99 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Gevan Putra Yudhistira | Data Analyst</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            max-width: 800px;
-            margin: 60px auto;
-            padding: 0 20px;
-            line-height: 1.6;
-            color: #222;
-            background-color: #ffffff;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gevan Putra Yudhistira | Data Analyst</title>
+  <meta name="description" content="Gevan Putra Yudhistira - Junior Data Analyst (Python, SQL, Data Visualization)" />
 
-        h1 {
-            font-size: 32px;
-            margin-bottom: 5px;
-        }
+  <!-- Optional: clean modern font (system fallback if blocked) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-        h2 {
-            margin-top: 40px;
-            font-size: 20px;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 5px;
-        }
+  <style>
+    :root{
+      color-scheme: dark;
+      --bg: #0b0f14;
+      --panel: #0f1621;
+      --text: #e6edf3;
+      --muted: #9aa4af;
+      --border: rgba(255,255,255,.10);
+      --link: #e6edf3;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
 
-        p {
-            margin: 10px 0;
-        }
+    *{ box-sizing: border-box; }
 
-        a {
-            color: #000;
-            text-decoration: none;
-            border-bottom: 1px solid #000;
-        }
+    body{
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 700px at 20% 0%, rgba(255,255,255,.06), transparent 55%),
+                  radial-gradient(900px 600px at 80% 10%, rgba(255,255,255,.04), transparent 55%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
 
-        a:hover {
-            opacity: 0.6;
-        }
+    .wrap{
+      max-width: 860px;
+      margin: 64px auto;
+      padding: 0 20px;
+    }
 
-        .section {
-            margin-top: 30px;
-        }
+    .card{
+      background: rgba(255,255,255,.03);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(6px);
+    }
 
-        .small {
-            color: #555;
-            font-size: 14px;
-        }
-    </style>
+    h1{
+      margin: 0 0 6px;
+      font-size: 34px;
+      letter-spacing: -0.02em;
+    }
+
+    .role{
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .meta{
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .meta a{
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,.25);
+    }
+    .meta a:hover{ border-bottom-color: rgba(255,255,255,.55); }
+
+    .grid{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .section{
+      border-top: 1px solid var(--border);
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+
+    h2{
+      margin: 0 0 10px;
+      font-size: 16px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    p{ margin: 0 0 10px; }
+
+    .pillrow{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .pill{
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.02);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 13px;
+      color: var(--text);
+    }
+
+    .cta{
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 6px;
+    }
+    .cta:hover{
+      background: rgba(255,255,255,.06);
+      border-color: rgba(255,255,255,.18);
+    }
+
+    .footer{
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (min-width: 760px){
+      .grid{
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+      .span2{ grid-column: span 2; }
+    }
+  </style>
 </head>
 
 <body>
+  <main class="wrap">
+    <div class="card">
+      <header>
+        <h1>Gevan Putra Yudhistira</h1>
+        <p class="role">Junior Data Analyst • Python • SQL • Data Visualization</p>
 
-    <h1>Gevan Putra Yudhistira</h1>
-    <p class="small">Junior Data Analyst | Python | SQL | Data Visualization</p>
+        <p class="meta">
+          📍 Kota Batu, Indonesia &nbsp;•&nbsp;
+          📧 <a href="mailto:putra.gevan00@gmail.com">putra.gevan00@gmail.com</a> &nbsp;•&nbsp;
+          🔗 <a href="https://github.com/mochaheree" target="_blank" rel="noreferrer">github.com/mochaheree</a>
+        </p>
+      </header>
 
-    <p>
-        📍 Kota Batu, Indonesia <br>
-        📧 putra.gevan00@gmail.com <br>
-        🔗 <a href="https://github.com/mochaheree" target="_blank">GitHub</a>
-    </p>
-
-    <div class="section">
-        <h2>About Me</h2>
-        <p>
+      <div class="grid">
+        <section class="section span2">
+          <h2>About</h2>
+          <p>
             Computer Engineering graduate from Universitas Brawijaya (2025).
-            Currently transitioning into Data Analytics and Product Analytics 
-            with a strong interest in data-driven decision making, dashboard reporting,
-            and machine learning.
-        </p>
-    </div>
+            Currently transitioning into Data Analytics and Product Analytics with a strong interest in
+            data-driven decision making, dashboard reporting, and machine learning.
+          </p>
+        </section>
 
-    <div class="section">
-        <h2>Skills</h2>
-        <p>
-            Python • SQL • Data Cleaning • Data Visualization • Dashboard Reporting • Statistical Analysis
-        </p>
-    </div>
+        <section class="section">
+          <h2>Skills</h2>
+          <div class="pillrow">
+            <span class="pill">Python</span>
+            <span class="pill">SQL</span>
+            <span class="pill">Data Cleaning</span>
+            <span class="pill">Data Visualization</span>
+            <span class="pill">Dashboard Reporting</span>
+            <span class="pill">Statistical Analysis</span>
+          </div>
+        </section>
 
-    <div class="section">
-        <h2>Resume</h2>
-        <p>
-            <a href="resume.pdf" target="_blank">Download Resume (PDF)</a>
-        </p>
-    </div>
+        <section class="section">
+          <h2>Resume</h2>
+          <p>
+            <a class="cta" href="resume.pdf" target="_blank" rel="noreferrer">
+              📄 Download Resume (PDF)
+            </a>
+          </p>
+          <p class="footer">Direct link: <a href="resume.pdf" target="_blank" rel="noreferrer">/resume.pdf</a></p>
+        </section>
 
-    <div class="section">
-        <h2>Projects</h2>
-        <p>
-            Coming soon. Currently building data analytics projects.
-        </p>
-    </div>
+        <section class="section span2">
+          <h2>Projects</h2>
+          <p>Coming soon. Currently building data analytics projects to showcase here.</p>
+          <p class="footer">Tip: add links later, e.g. GitHub repo + short 1–2 line description.</p>
+        </section>
+      </div>
 
+      <p class="footer">© <span id="y"></span> Gevan Putra Yudhistira</p>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+
